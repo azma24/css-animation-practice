@@ -1,0 +1,63 @@
+/* ===========================
+   Reset & Base
+=========================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg: #fff;
+  --color-text: #1a1a1a;
+  --color-border: #64C8F0;
+  --font-size-card: 1.5rem;
+}
+
+html {
+  font-size: 14px;
+  /* remの基準 */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Hiragino ProN', 'Yu Gothic', sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  padding: 0 90px;
+}
+
+h2 {
+  font-family: 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  margin: 20px 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  padding: 48px 24px;
+  text-align: center;
+  border: 1px solid var(--color-border);
+}
+
+.card h3 {
+  font-size: var(--font-size-card);
+  margin: 10px 0;
+}
+
+.card p {
+  text-align: left;
+  margin: 10px 0;
+}
