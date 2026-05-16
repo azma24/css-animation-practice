@@ -1,0 +1,89 @@
+/* ===========================
+   Reset & Base
+=========================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-accent: #6a9c7f;
+}
+
+:root.theme-gold {
+  --color-accent: #c8a96e;
+}
+
+html {
+  font-size: 14px;
+  /* remの基準 */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Hiragino ProN', 'Yu Gothic', sans-serif;
+  color: #1a1a1a;
+  background-color: #fff;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  padding: 0 90px;
+}
+
+h2 {
+  font-family: 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  margin: 20px 0;
+}
+
+button{
+  appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+ }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  padding: 48px 24px;
+  text-align: center;
+  border: 1px solid var(--color-accent);
+  transition: border-color 0.3s ease;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: var(--color-accent);
+  transition: color 0.3s ease;
+}
+
+.card p {
+  text-align: left;
+  margin: 10px 0;
+}
+
+.card button{
+  color: var(--color-accent);
+  padding: 10px 20px;
+  transition: color 0.3s ease;
+}
+
+.color-change-btn{
+  background-color: #808080;
+  color: #fff;
+  padding: 10px 30px;
+  margin: 20px;
+}
+
