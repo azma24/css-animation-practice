@@ -1,0 +1,52 @@
+/* ===========================
+   Reset & Base
+=========================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-accent: #6a9c7f;
+}
+
+:root.theme-gold {
+  --color-accent: #c8a96e;
+}
+
+html {
+  font-size: 14px;
+  /* remの基準 */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Hiragino ProN', 'Yu Gothic', sans-serif;
+  color: #1a1a1a;
+  background-color: #fff;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  padding: 0 90px;
+}
+
+h2 {
+  font-family: 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  margin: 20px 0;
+}
+
+h3{
+  margin-bottom: 20px;
+}
+
+h3::before {
+  display: inline-block;
+  content: "";
+  width: 5px;
+  height: 2.8em;
+  background-color: #1a1a1a;
+  margin-right: 8px;
+  vertical-align: middle;
+}
