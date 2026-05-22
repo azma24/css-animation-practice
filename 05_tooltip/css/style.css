@@ -1,0 +1,92 @@
+/* ===========================
+   Reset & Base
+=========================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+  /* remの基準 */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Hiragino ProN', 'Yu Gothic', sans-serif;
+  color: #1a1a1a;
+  background-color: #fff;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  padding: 0 90px;
+}
+
+h2 {
+  font-family: 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  margin: 20px 0;
+}
+
+p {
+  margin: 20px 0;
+}
+
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.tip-btn {
+  position: relative;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.tip-btn::after {
+  content: attr(data-tip);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  position: absolute;
+  left: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 5px 20px;
+  pointer-events: none;
+}
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (hover: hover) {
+  .tip-btn:hover::after {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .tip-btn.is-open::after {
+    opacity: 1;
+  }
+
+  body {
+    padding: 0;
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>::after ＋ JSでチップツールを作る</title>
+    <meta name="description" content="" />
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <main>
+      <h2>::after ＋ JSでチップツールを作る</h2>
+      <section>
+        <p>PC版はホバー表示、スマホ版はタップ表示</p>
+        <form>
+          <div class="field">
+            <label for="name">お名前</label>
+            <div class="input-wrap">
+              <input type="text" id="name" />
+              <button
+                type="button"
+                class="tip-btn"
+                data-tip="フルネームをご記入ください"
+              >
+                ?
+              </button>
+            </div>
+          </div>
+          <div class="field">
+            <label for="tel">電話番号</label>
+            <div class="input-wrap">
+              <input type="tel" id="tel" />
+              <button
+                type="button"
+                class="tip-btn"
+                data-tip="ハイフンなしでご記入ください"
+              >
+                ?
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
