@@ -1,0 +1,96 @@
+/* ===========================
+   Reset & Base
+=========================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+  /* remの基準 */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Hiragino ProN', 'Yu Gothic', sans-serif;
+  color: #1a1a1a;
+  background-color: #fff;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  padding: 0 90px;
+}
+
+h2 {
+  font-family: 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  margin: 20px 0;
+}
+
+p {
+  margin: 20px 0;
+}
+
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+}
+
+.card {
+  width: 320px;
+  height: 400px;
+  overflow: hidden; /* 親要素からはみ出した部分を切り取る */
+  position: relative;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+  object-fit: cover;
+}
+
+/* .cardにホバーした時、その中にある.card-imageにズームを当てる */
+.card:hover .card-image {
+  transform: scale(1.2);
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.8s ease;
+}
+
+/* .card にホバーしたとき、その中にある .card-overlay にこのスタイルを当てる */
+.card:hover .card-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background-color: #fff;
+  color: #1a1a1a;
+  padding: 12px 24px;
+  border-radius: 9999px; /* 角丸の半径を極端に大きくすることで、両端が完全に丸いカプセル型になる */
+  width: 160px;
+}
+
+.card:hover .card-button {
+  /* .cardにホバーした時、.card-buttonを表示させる */
+  opacity: 1;
+}
