@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>モーダルで商品詳細を表示する</title>
+    <meta name="description" content="" />
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <main>
+      <h2>モーダルで商品詳細を表示する</h2>
+      <div class="product">
+        <img
+          class="product-image"
+          src="img/greentea.jpg"
+          alt="Shizuku Premium Green Teaの画像"
+        />
+        <p class="product-name">Shizuku Premium Green Tea</p>
+        <p class="product-price">¥2,800</p>
+        <button class="js-open" type="button">詳しく見る</button>
+      </div>
+
+      <div class="modal js-modal">
+        <div class="modal-overlay js-close"></div>
+        <div class="modal-content">
+          <button class="modal-close js-close" type="button">✕</button>
+          <img
+            class="modal-image"
+            src="img/greentea.jpg"
+            alt="Shizuku Premium Green Teaの画像"
+          />
+          <p class="modal-name">Shizuku Premium Green Tea</p>
+          <p class="modal-price">¥2,800</p>
+          <p class="modal-description">
+            霧深い山間で丁寧に摘み取った茶葉を、伝統の製法で仕上げた一煎。<br />凛とした香りと、深みのある余韻をお楽しみください。
+          </p>
+          <dl class="modal-detail">
+            <div>
+              <dt>産地</dt>
+              <dd>静岡県川根本町</dd>
+            </div>
+            <div>
+              <dt>内容量</dt>
+              <dd>30g</dd>
+            </div>
+            <div>
+              <dt>賞味期限</dt>
+              <dd>製造日より180日</dd>
+            </div>
+          </dl>
+          <p class="modal-shop-label">取り扱い店舗</p>
+          <p class="modal-shop">雫 京都本店・銀座店</p>
+        </div>
+      </div>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

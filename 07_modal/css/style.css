@@ -1,0 +1,147 @@
+/* ===========================
+   Reset & Base
+=========================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+  /* remの基準 */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Hiragino ProN', 'Yu Gothic', sans-serif;
+  color: #1a1a1a;
+  background-color: #fff;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  padding: 0 90px;
+  position: relative;
+}
+
+h2 {
+  font-family: 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  margin: 20px 0;
+}
+
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  display: block;
+}
+
+.product {
+  width: 50%;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.js-open {
+  display: block;
+  margin: 0 auto;
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 24px 48px;
+  text-align: center;
+}
+
+.modal {
+  opacity: 0;
+  visibility: hidden; /* 隠れているとき操作を無効にする */
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease;
+}
+
+.modal.is-open {
+  opacity: 1;
+  visibility: visible; /* 隠れていないとき操作を有効にする */
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: 20px;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 101;
+  transform: translate(-50%, -50%);
+  max-width: 1000px;
+  border: 1px solid gray;
+  text-align: center;
+  padding: 40px;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.modal-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.modal-description {
+  margin: 20px 0;
+}
+
+.modal-detail {
+  text-align: left;
+  margin: 40px 0;
+}
+
+.modal-detail dt,
+.modal-detail dd {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.modal-detail dt {
+  width: 30%;
+}
+
+.modal-detail dd {
+  width: 65%;
+}
+
+.modal-shop {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.modal-close {
+  color: inherit;
+  display: block;
+  margin-left: auto;
+}
