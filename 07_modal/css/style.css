@@ -83,6 +83,7 @@ button {
   height: auto;
   display: block;
   padding: 20px;
+  margin: 0 auto;
 }
 
 .modal-overlay {
@@ -98,7 +99,9 @@ button {
   left: 50%;
   z-index: 101;
   transform: translate(-50%, -50%);
-  max-width: 1000px;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto; /* はみ出した時だけスクロールバーを表示する */
   border: 1px solid gray;
   text-align: center;
   padding: 40px;
