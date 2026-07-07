@@ -1,0 +1,118 @@
+/* ===========================
+   Reset & Base
+=========================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  /* remの基準 */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Hiragino ProN", "Yu Gothic", sans-serif;
+  color: #1a1a1a;
+  background-color: #fff;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+}
+
+header {
+  margin-top: 45px;
+  text-align: center;
+}
+
+.inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 90px;
+}
+
+.label {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: #f3663b;
+  margin-bottom: 12px;
+}
+
+.description-txt {
+  font-size: 0.8rem;
+  color: #b8adb8;
+  line-height: 1.8;
+}
+
+.item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #3d383c;
+  text-decoration: none;
+  color: inherit;
+}
+
+.item:hover .item-title {
+  color: #f3663b;
+}
+
+.item-num {
+  font-size: 2rem;
+  text-align: center;
+  color: #afb8ad;
+  flex-shrink: 0;
+  width: 48px;
+}
+
+.item-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.item-title {
+  font-size: 0.8rem;
+  transition: color 0.7s;
+}
+
+.item-folder {
+  font-size: 0.6rem;
+  color: #b8adb8;
+}
+
+.item-arrow {
+  font-size: 1rem;
+  color: #b8adb8;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.sp-only {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .sp-only {
+    display: block;
+  }
+
+  .label {
+    font-size: 0.7rem;
+  }
+
+  .inner {
+    padding: 20px 16px;
+  }
+}
